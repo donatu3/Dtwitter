@@ -1,0 +1,156 @@
+/*全体*/
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html,body {
+    height:100%;
+}
+body {  
+    margin: 0;
+    padding: 10px;
+    background-image: url(../images/sprinkles2.png);  
+}  
+
+/*ヘッダー*/
+div#header {
+	height:89px;
+	background-color:#d3e4e8;
+    text-align: center;
+    background-image:url("../images/one_way_checker.png");
+    background-repeat: no-repeat;
+}
+h1 {
+	padding:20px 0px 0px 30px;
+}
+h1 a {
+    text-decoration:none;
+    color:black;
+}
+
+/*メニュー*/
+ul{
+    margin:0;
+    padding:0;
+}
+ul#menu {
+    text-align: center;
+	height:42px;
+    font-weight:bold;
+}
+li.menu{
+	float:left;
+	display:inline;
+	list-style-type:none;
+	width:156px; height:34px;
+	background-image:url("../images/bg_menu.jpg");
+}
+li.menu:hover{
+	background-image:url("../images/bg_menu_hover.jpg");
+}
+li.current_menu{
+	float:left;
+	display:inline;
+	list-style-type:none;
+	width:156px; 
+    height:34px;
+	background-image:url("../images/bg_menu_current.jpg");
+}
+li.current_menu:hover{
+	background-image:url("../images/bg_menu_hover.jpg");
+}
+ul#menu a {
+	display:block;
+	height:34px; 
+    padding-top:4px;
+    text-align:center;
+	text-decoration:none; 
+    font-size: 20px;
+    color: #4b2ca9;
+}
+
+/*クリア*/
+.clear{
+    clear:both;
+}
+
+.home_list{
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.login_info{
+    text-align: right;
+}
+
+/*コンテンツ　ユーザー情報など*/
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    width:200px;
+    height:200px;
+    border: solid;
+}
+
+.userinfo{
+    border: solid;
+    border-width: 2.5px;
+    border-color: rgb(113, 78, 222);
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #d3e4e8;
+}
+
+.center{
+    text-align: center;
+}
+
+.banner{
+    margin-left: 20px;
+}
+
+.right{
+    text-align: right;
+}
+
+.discription{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*height: 100px;*/
+}
+
+.tweet_time{
+    font-weight: bold;
+}
+
+.tweet_text{
+}
+
+.error_message{
+    color: red;
+    width: 9999px;
+}
+
+/*ボタン*/
+.button {
+    width: 120px;
+    height: 30px;
+    background-color: #d8d3e8;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #b5a3ef;
+}
