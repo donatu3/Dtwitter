@@ -32,9 +32,13 @@ $(function () {
             },
             error: function(xhr, textStatus, errorThrown){
                 alert("エラー：もう一度試してください。" + textStatus + xhr + errorThrown);
+                $("button[data-id='"+$(self).data("id")+"']").each(function(i, elem) {
+                    $(elem).removeAttr('disabled');
+                    $(elem).text("フォロー");
+                });
             },
             type:"get",
-            url:"\/Dtwitter\/commons\/createFriend.php"
+            url:"\/Dtwitter\/commons\/api\/createFriend.php"
         });
         return false;
     });
@@ -65,9 +69,13 @@ $(function () {
             },
             error: function(xhr, textStatus, errorThrown){
                 alert("エラー：もう一度試してください。" + textStatus + xhr + errorThrown);
+                $("button[data-id='"+$(self).data("id")+"']").each(function(i, elem) {
+                    $(elem).removeAttr('disabled');
+                    $(elem).text("フォロー解除");
+                });
             },
             type:"get",
-            url:"\/Dtwitter\/commons\/destroyFriend.php"
+            url:"\/Dtwitter\/commons\/api\/destroyFriend.php"
         });
         return false;
     });

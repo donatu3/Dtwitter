@@ -1,4 +1,5 @@
 <?php
+/***** パスからURLを生成する *****/
 function path_to_url($path, $default_port = 80){
     //ドキュメントルートのパスとURLの作成
     $document_root_url = $_SERVER['SCRIPT_NAME'];

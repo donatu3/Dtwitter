@@ -2,17 +2,17 @@
     if(!isset($_SESSION)){
         session_start();
     }
-
-    require_once(__DIR__.'/enableHyperLink.php');
-    require_once(__DIR__.'/path_to_url.php');
-    require_once(__DIR__.'/searchTweets.php');
+    require_once(__DIR__.'/../config/parameters.php');
+    require_once(__DIR__.'/../helper/enableHyperLink.php');
+    require_once(__DIR__.'/../helper/path_to_url.php');
+    require_once(__DIR__.'/../api/searchTweets.php');
     //ツイートの検索を行う
     if(isset($_GET['next']) && isset($_GET['keyword'])){
         $keyword = $_GET['keyword'];
         $next = $_GET['next'];
-        $val = searchTweets($keyword,$next);
+        $val = searchTweets($keyword,$SEARCH_TWEET_NUM,$next);
     }else{
-        $val = searchTweets($keyword);
+        $val = searchTweets($keyword,$SEARCH_TWEET_NUM);
     }
     if($val['error']['flag'] == false){
         $next = $val['datas']['search_metadata']['max_id'];
@@ -22,7 +22,7 @@
             echo "<a href='https://twitter.com/".$val['user']['screen_name']."' target='_blank'>＠".$val['user']['screen_name']."</a>";
             if($val['user']['protected'] == 1){
                 $lock = 1;
-                echo '<img src="'.path_to_url(dirname(__DIR__).'/images/lock.png').'" alt="LOCK" width="32" height="32">';
+                echo '<img src="'.path_to_url(dirname(__DIR__).'/../images/lock.png').'" alt="LOCK" width="32" height="32">';
             }else{
                 $lock = 0;
             }

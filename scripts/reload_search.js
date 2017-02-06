@@ -11,10 +11,10 @@ $(function () {
                 },
                 error: function(xhr, textStatus, errorThrown){
                     $("#next").remove();
-                    //alert("エラー" + textStatus + xhr + errorThrown);
+                    alert("エラー" + textStatus + xhr + errorThrown);
                 },
                 type:"get",
-                url:"\/Dtwitter\/commons\/search.php"
+                url:"\/Dtwitter\/commons\/response\/search.php"
             });
             setTimeout(reload,20000);
         }

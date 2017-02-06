@@ -3,7 +3,7 @@
         session_start();
     }
 
-    require_once(__DIR__.'/getRateLimits.php');
+    require_once(__DIR__.'/../api/getRateLimits.php');
     //APIの使用状況を調べる
     $val = getRateLimits(array("application","friendships","users","followers","friends","search"));
     if($val['error']['flag'] == false){

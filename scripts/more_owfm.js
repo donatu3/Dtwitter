@@ -6,7 +6,6 @@ $(function () {
             if(next_cursor == 0){
                 //$("div.content").append("<div class=\"more_wrap\">片思いのユーザーを全て表示しました</div>");
                 $("<div class=\"more_wrap\">片思いのユーザーを全て表示しました</div>").appendTo("div.content").hide().fadeIn('slow');
-
             }else{
                 //$("div.content").append("<div class=\"more_wrap\"><button id=\"more\" class=\"button\">さらに読み込む</button></div>");
                 $("<div class=\"more_wrap\"><button id=\"more\" class=\"button\">さらに読み込む</button></div>").appendTo("div.content").hide().fadeIn('slow');
@@ -39,7 +38,7 @@ $(function () {
                 $(self).removeAttr('disabled').text("さらに読み込む");
             },
             type:"get",
-            url:"\/Dtwitter\/commons\/one-way-from-me.php"
+            url:"\/Dtwitter\/commons\/response\/one-way-from-me.php"
         });
         return false;
     });

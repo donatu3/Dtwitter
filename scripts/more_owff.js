@@ -38,7 +38,7 @@ $(function () {
                 $(self).removeAttr('disabled').text("さらに読み込む");
             },
             type:"get",
-            url:"\/Dtwitter\/commons\/one-way-from-friend.php"
+            url:"\/Dtwitter\/commons\/response\/one-way-from-friend.php"
         });
         return false;
     });
